@@ -3,12 +3,13 @@ import wave
 import threading
 import time
 import sys
+import os
 from pygame import mixer
 
 
 class AudioRecorder:
     def __init__(self, test_id):
-        self.AUDIO_OUTPUT_DIR = "../../results/wav"
+        self.AUDIO_OUTPUT_DIR = os.getcwd() + "/results/wav"
         self.WAVE_OUTPUT_FILENAME = str(test_id) + ".wav" 
         self.WAVE_OUTPUT_FILE_PATH = self.AUDIO_OUTPUT_DIR + "/" + self.WAVE_OUTPUT_FILENAME
         self.iDeviceIndex = 0

@@ -1,4 +1,0 @@
-"first_name","名前を入力してください(姓)","short_text"
-"last_name","名前を入力してください(名)","short_text"
-"age","年齢を入力してください(半角数字)","int"
-"gender","性別を入力してください。","qualitative","male","female"
