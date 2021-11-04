@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>音がなったら発話してください。</h1>
+    <p>録音が終了したら次へ進むボタンを押してください。</p>
+    
+    <form method="GET" action="/rerecord">
+      <button type="submit">再録音する。</button>
+    </form>
+
+    <form method="GET" action="/finishrecord">
+      <button type="submit">次へ</button>
+    </form>
+    
+</div>
+</body>
+</html>

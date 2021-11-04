@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <style type="text/css">
+        div.form_base{
+            position: relative;
+            margin-bottom: 50px;
+        }
+        div.form_basic_name{
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        div.form_basic_input_field{
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+        div.form_radio{
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+        div.form_range{
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+        div.pulldown{
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+        p.range_input_field_left_label{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        input.range_input_field_slide_bar{
+            position: absolute;
+            width 100px;
+            top: 5px;
+            left: 70px;
+        }
+        p.range_input_field_right_label{
+            position: absolute;
+            top: 0px;
+            left: 220px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>実験シナリオ No.{{questionaire_id}}</h1>
+    <p>以下のシチュエーションで謝罪する場合どのような心情ですか？</p>
+    <p>場所: {{place}}</p>
+    <p>謝罪対象: {{target}}</p>
+    <p>理由: {{reason}}</p>
+
+
+    <form method="POST" action="" style="position:relative;left:500px;top:-200px">
+        <div class="form_base">
+            <div class="form_basic_name">
+                <p>Q1 この状況で申し訳なく感じますか？：</p>
+            </div>
+
+            <div class="form_range">
+                <p class="range_input_field_left_label">感じない</p>
+                <input class="range_input_field_slide_bar" type="range" name="q1" min="0" max="5"required>
+                <p class="range_input_field_right_label">感じる</p>
+            </div>
+        </div>
+        
+        <div class="form_base">
+            <div class="form_basic_name">
+                <p>Q2 自分に責任があると感じますか？：</p>
+            </div>
+
+            <div class="form_range">
+                <p class="range_input_field_left_label">感じない</p>
+                <input class="range_input_field_slide_bar" type="range" name="q2" min="0" max="5"required>
+                <p class="range_input_field_right_label">感じる</p>
+            </div>
+        </div>
+
+        <div class="form_base">
+            <div class="form_basic_name">
+                <p>Q3 この状況で謝罪しなければいけないとしたら不満に感じますか?：
+            </div>
+            <div class="form_range">
+                <p class="range_input_field_left_label">感じない</p>
+                <input class="range_input_field_slide_bar" type="range" name="q3" min="0" max="5"required>
+                <p class="range_input_field_right_label">感じる</p>
+            </div>
+        </div>
+
+        <div class="form_base">
+            <div class="form_basic_name">
+                <p>Q4 実際に謝罪しますか？: </p>
+            </div>
+            
+            <div class="form_radio">
+                <input type="radio" name="q4" value="yes" required><label>する</label><br/>
+                <input type="radio" name="q4" value="no"><label>しない</label><br/>
+            </div>
+        </div>
+
+        <div class="form_base">
+            <div class="form_basic_name">
+                <p>謝罪する際の選択肢を選んでください。: </p>
+            </div>
+            <select name="word" class="form_pulldown">
+                <option value="word1">{{word1}}</option>
+                <option value="word2">{{word2}}</option>
+                <option value="word3">{{word3}}</option>
+                <option value="word4">{{word4}}</option>
+            </select>
+        </div>
+        <p><input type="submit" value="回答を登録して録音を開始する。"></p>
+    </form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <style type="text/css">
+        div.form_base{
+            position: static;
+        }
+        div.form_basic_name{
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        div.form_basic_input_field{
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+        div.form_radio{
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>個人情報入力</h1>
+    <p>実験にあたり，個人情報の提供をよろしくお願いいたします。</p>
+    <form method="POST" action="">
+        <div class="form_base">
+                <div class="form_basic_name">
+                    <p>お名前：</p>
+                </div>
+                <div class="form_basic_input_field">
+                    <input type="text" name="name" required>
+                </div>
+        </div>
+
+        <div class="form_base">
+            <div class="form_basic_name">
+                <p>Emailアドレス：</p>
+            </div>
+            <div class="form_basic_input_field">
+                <input type="text" name="email" required>
+            </div>
+        </div>
+
+        <div class="form_base">
+            <div class="form_basic_name">
+                <p>年齢：</p>
+            </div>
+            <div class="form_basic_input_field">
+                <input type="number" name="age" min="0" max="150" required>
+            </div>
+        </div>
+
+        <div class="form_base">
+            <div class="form_basic_name">
+                <p>性別：</p>
+            </div>
+            <div class="form_radio">
+                <input type="radio" name="gender" value="male" required><label>男性</label><br/>
+                <input type="radio" name="gender" value="female"><label>女性</label><br/>
+                <input type="radio" name="gender" value="other"><label>その他</label><br/>
+            </div>
+        </div>
+        
+        <p><input type="submit" value="登録して次へ"></p>
+    </form>
+
+</div>
+</body>
+</html>
