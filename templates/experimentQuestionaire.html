@@ -50,18 +50,18 @@
             top: 0px;
             left: 220px;
         }
+        
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>実験シナリオ No.{{questionaire_id}}</h1>
-    <p>以下のシチュエーションで謝罪する場合どのような心情ですか？</p>
-    <p>場所: {{place}}</p>
-    <p>謝罪対象: {{target}}</p>
-    <p>理由: {{reason}}</p>
+
+    <p style="font-size: 48px;">場所: {{place}}</p>
+    <p style="font-size: 48px;">謝罪対象: {{target}}</p>
+    <p style="font-size: 48px;">状況: {{reason}}</p>
 
 
-    <form method="POST" action="" style="position:relative;left:500px;top:-200px">
+    <form method="POST" action="" style="position:relative; width: 500px; left:700px;">
         <div class="form_base">
             <div class="form_basic_name">
                 <p>Q1 この状況で申し訳なく感じますか？：</p>
@@ -108,7 +108,7 @@
             </div>
         </div>
 
-        <div class="form_base">
+        <div class="form_base" style="position: relative; top:-50px;">
             <div class="form_basic_name">
                 <p>謝罪する際の選択肢を選んでください。: </p>
             </div>
@@ -119,7 +119,7 @@
                 <option value="word4">{{word4}}</option>
             </select>
         </div>
-        <p><input type="submit" value="回答を登録して録音を開始する。"></p>
+        <input type="submit" value="回答を登録して録音を開始する。" style="position: relative; top:-90px;"></p>
     </form>
 
 </div>

@@ -1,6 +1,7 @@
 from __future__ import print_function
 import datetime
 import csv
+import random
 
 from flask import Flask, render_template, request, redirect
 
@@ -10,26 +11,16 @@ app = Flask(__name__)
 global_particilant_id = ""
 next_link = ""
 global_pure_next_link = ""
+questionaire_csv_path = "./questionaires/Stimuli_Production_2021_01.csv"
+result_csv_path = "./results/apology_test.csv"
 
+l = []
+with open(questionaire_csv_path, "r", newline='') as f:
+    reader = csv.reader(f)
+    l = [row for row in reader]
+random.shuffle(l)
 
-@app.route("/")
-def title():
-    experiment_date = datetime.datetime.now().strftime("%Y-%m-%d")
-    experimenter = "小西先生"
-    organization = "早稲田大学"
-    experiment_name = "実験名"
-    return render_template("title.html", 
-                           experiment_date= experiment_date,
-                           experimenter= experimenter,
-                           organization= organization,
-                           experiment_name= experiment_name)
-
-
-@app.route("/introduction")
-def introduction():
-    return render_template("introduction.html")
-
-@app.route("/setpersonalinformation", methods=["GET","POST"])
+@app.route("/", methods=["GET","POST"])
 def setPersonalInformation():
     global global_particilant_id
     global global_audio_recorder
@@ -65,18 +56,12 @@ def experimentQuestionaireIntroduction():
 
 @app.route("/experimentquestionaire/<int:id>", methods=["GET","POST"])
 def experimentQuestionaire(id):
-    questionaire_csv_path = "./questionaires/Stimuli_Production_2021_01.csv"
-    result_csv_path = "./results/apology_test.csv"
-    l = []
+
     global next_link
     global global_pure_next_link
     global global_audio_recorder
     
-    with open(questionaire_csv_path, "r", newline='') as f:
-        reader = csv.reader(f)
-        l = [row for row in reader]
-    
-    if len(l) < id:
+    if len(l) < id+1:
         return redirect("/finishallsession")
     
     questionaire = l[id]
