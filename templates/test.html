@@ -1,0 +1,18 @@
+<label><input type="checkbox" name="scb1">りんご</label><br>
+<label><input type="checkbox" name="scb2" value="on">みかん</label><br>
+<label><input type="checkbox" name="scb3" value="on"
+              onclick="connecttext('textforscb3',this.checked);">その他</label>：
+<input type="text" name="othertext" id="textforscb3" value="">
+
+<script type="text/javascript">
+    function connecttext( textid, ischecked ) {
+    if( ischecked == true ) {
+        // チェックが入っていたら有効化
+        document.getElementById(textid).disabled = false;
+    }
+    else {
+        // チェックが入っていなかったら無効化
+        document.getElementById(textid).disabled = true;
+    }
+}
+</script>

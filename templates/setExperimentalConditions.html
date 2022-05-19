@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <style type="text/css">
+        div.form_base{
+            position: relative;
+            margin-bottom: 50px;
+        }
+        div.form_basic_name{
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        div.form_basic_input_field{
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+        div.form_radio{
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+        div.form_range{
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+        div.pulldown{
+            position: relative;
+            top: -10px;
+            left: 0px;
+        }
+        p.range_input_field_left_label{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        input.range_input_field_slide_bar{
+            position: absolute;
+            width: 100px;
+            top: 5px;
+            left: 70px;
+        }
+        p.range_input_field_right_label{
+            position: absolute;
+            top: 0px;
+            left: 220px;
+        }
+        .backbutton{
+            position: absolute;
+            bottom: 100px;
+            left: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <p style="font-size: 48px;">実験条件の設定</p>
+    <form method="POST" action="" style="position:relative; width: 500px; left:700px;">
+        
+        <div class="form_base" style="position: relative; top:-50px;">
+            <div>
+                <p>再生するフォルダ名</p>
+                <input type="number" id="folder_name" name="folder_name" required>
+                <p></p>
+            </div>
+        </div>
+        <input type="submit" value="実験を開始する" style="position: relative; top:-60px;">
+        
+    </form>
+</div>
+</body>
+</html>

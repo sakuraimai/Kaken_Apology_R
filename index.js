@@ -16,11 +16,11 @@ app.on('ready', function() {
   var pyshell = new PythonShell('./app.py');
 
   const openWindow = function() {
-    mainWindow = new BrowserWindow({width: 1600, height: 1000 });
+    mainWindow = new BrowserWindow({fullscreen: true});
     mainWindow.loadURL(mainAddr);
 
     // 開発ツールを有効化
-    mainWindow.webContents.openDevTools();
+    //mainWindow.webContents.openDevTools();
 
     // 終了処理
     mainWindow.on('closed', function() {

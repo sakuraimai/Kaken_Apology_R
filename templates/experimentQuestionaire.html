@@ -41,7 +41,7 @@
         }
         input.range_input_field_slide_bar{
             position: absolute;
-            width 100px;
+            width: 100px;
             top: 5px;
             left: 70px;
         }
@@ -50,7 +50,12 @@
             top: 0px;
             left: 220px;
         }
-        
+        .backbutton{
+            position: absolute;
+            bottom: 100px;
+            left: 30px;
+        }
+
     </style>
 </head>
 <body>
@@ -69,11 +74,11 @@
 
             <div class="form_range">
                 <p class="range_input_field_left_label">感じない</p>
-                <input class="range_input_field_slide_bar" type="range" name="q1" min="0" max="5"required>
+                <input class="range_input_field_slide_bar" type="range" name="q1" min="1" max="100"required>
                 <p class="range_input_field_right_label">感じる</p>
             </div>
         </div>
-        
+
         <div class="form_base">
             <div class="form_basic_name">
                 <p>Q2 自分に責任があると感じますか？：</p>
@@ -81,7 +86,7 @@
 
             <div class="form_range">
                 <p class="range_input_field_left_label">感じない</p>
-                <input class="range_input_field_slide_bar" type="range" name="q2" min="0" max="5"required>
+                <input class="range_input_field_slide_bar" type="range" name="q2" min="1" max="100"required>
                 <p class="range_input_field_right_label">感じる</p>
             </div>
         </div>
@@ -92,7 +97,7 @@
             </div>
             <div class="form_range">
                 <p class="range_input_field_left_label">感じない</p>
-                <input class="range_input_field_slide_bar" type="range" name="q3" min="0" max="5"required>
+                <input class="range_input_field_slide_bar" type="range" name="q3" min="1" max="100"required>
                 <p class="range_input_field_right_label">感じる</p>
             </div>
         </div>
@@ -101,7 +106,7 @@
             <div class="form_basic_name">
                 <p>Q4 実際に謝罪しますか？: </p>
             </div>
-            
+
             <div class="form_radio">
                 <input type="radio" name="q4" value="yes" required><label>する</label><br/>
                 <input type="radio" name="q4" value="no"><label>しない</label><br/>
@@ -113,15 +118,18 @@
                 <p>謝罪する際の選択肢を選んでください。: </p>
             </div>
             <select name="word" class="form_pulldown">
-                <option value="word1">{{word1}}</option>
-                <option value="word2">{{word2}}</option>
-                <option value="word3">{{word3}}</option>
-                <option value="word4">{{word4}}</option>
+                <option value="1">{{word1}}</option>
+                <option value="2">{{word2}}</option>
+                <option value="3">{{word3}}</option>
+                <option value="4">{{word4}}</option>
             </select>
         </div>
         <input type="submit" value="回答を登録して録音を開始する。" style="position: relative; top:-90px;"></p>
     </form>
 
+    <form class="backbutton" method="GET" action="/reversepastquestipnaire")>
+        <button type="submit">前の質問へ戻る。</button>
+      </form>
 </div>
 </body>
 </html>

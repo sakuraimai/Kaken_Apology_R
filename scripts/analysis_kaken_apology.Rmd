@@ -1,0 +1,69 @@
+#```{r}
+library(plyr)
+library(ggplot2)
+rawdata <- read.csv("/Users/tkonishi/Library/Mobile Documents/com~apple~CloudDocs/Kaken_Apology/results/data/data_kaken_apology.csv")
+rawdata$q4 <- as.logical(rawdata$q4)
+rawdata <- transform(rawdata, remorseful = ifelse(q1 >= 50, 'high', 'low'))
+rawdata <- transform(rawdata, responsible = ifelse(q2 >= 50, 'high', 'low'))
+rawdata <- transform(rawdata, dissatisfied = ifelse(q3 >= 50, 'high', 'low'))
+#summary(rawdata)
+
+data_gomen <- subset(rawdata, word == "gomen")
+ggplot(data_gomen, aes(x = mora, y = mora_dur, fill = remorseful)) + geom_boxplot() + labs(title = "kono jookyoo de mooshiwakenaku...")
+ggplot(data_gomen, aes(x = q1, y = mora_int, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+ggplot(data_gomen, aes(x = mora, y = mora_int, fill = remorseful)) + geom_boxplot() + labs(title = "kono jookyoo de mooshiwakenaku...")
+data_gomen <- subset(rawdata, word == "gomen")
+#ggplot(data_gomen, aes(x = mora, y = mora_f0_max, fill = remorseful)) + geom_boxplot() + labs(title = "kono jookyoo de mooshiwakenaku...")
+
+data_gomenne <- subset(rawdata, word == "gomenne")
+ggplot(data_gomenne, aes(x = q1, y = mora_dur, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+ggplot(data_gomenne, aes(x = mora, y = mora_dur, fill = remorseful)) + geom_boxplot() + labs(title = "kono jookyoo de mooshiwakenaku...")
+ggplot(data_gomenne, aes(x = q1, y = mora_int, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+ggplot(data_gomenne, aes(x = mora, y = mora_int, fill = remorseful)) + geom_boxplot() + labs(title = "kono jookyoo de mooshiwakenaku...")
+#ggplot(data_gomenne, aes(x = q1, y = mora_f0_max, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+
+data_sumimasen <- subset(rawdata, word == "sumimasen")
+ggplot(data_sumimasen, aes(x = q1, y = mora_dur, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+ggplot(data_sumimasen, aes(x = q1, y = mora_int, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+#ggplot(data_sumimasen, aes(x = q1, y = mora_f0_max, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+
+data_sumimasendesita <- subset(rawdata, word == "sumimasendesita")
+ggplot(data_sumimasendesita, aes(x = q1, y = mora_dur, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+ggplot(data_sumimasendesita, aes(x = q1, y = mora_int, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+
+data_moosiwakenaidesu <- subset(rawdata, word == "moosiwakenaidesu")
+ggplot(data_moosiwakenaidesu, aes(x = q1, y = mora_dur, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+ggplot(data_moosiwakenaidesu, aes(x = q1, y = mora_int, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+
+data_moosiwakearimasen <- subset(rawdata, word == "moosiwakearimasen")
+ggplot(data_moosiwakearimasen, aes(x = q1, y = mora_dur, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+data_moosiwakearimasen <- subset(rawdata, word == "moosiwakearimasen")
+ggplot(data_moosiwakearimasen, aes(x = q1, y = mora_int, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+
+data_moosiwakearimasendesita <- subset(rawdata, word == "moosiwakearimasendesita")
+ggplot(data_moosiwakearimasendesita, aes(x = q1, y = mora_dur, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+ggplot(data_moosiwakearimasendesita, aes(x = q1, y = mora_int, colour = mora)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~mora) + labs(title = "kono jookyoo de mooshiwakenaku...")
+
+
+
+
+data_word <- ddply(rawdata, c('subject', 'word_dur', 'word_int', 'word_f0_range'))
+
+ggplot(data_word, aes(x = q1, y = word_dur, colour = word)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~word) + labs(title = "kono jookyoo de mooshiwakenaku...")
+#ggplot(data_word, aes(x = q2, y = word_dur, colour = word)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~word) + labs(title = "jibunni sekininga aru to...")
+#ggplot(data_word, aes(x = q3, y = word_dur, colour = word)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~word) + labs(title = "... human ni kanji masu ka")
+#ggplot(data_word, aes(x = q4, y = word_dur, fill = word)) + geom_point() + geom_boxplot() + facet_wrap(~word) + labs(title = "jissai ni...")
+
+ggplot(data_word, aes(x = q1, y = word_int, colour = word)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~word) + labs(title = "kono jookyoo de mooshiwakenaku...")
+#ggplot(data_word, aes(x = q2, y = word_int, colour = word)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~word) + labs(title = "jibunni sekininga aru to...")
+#ggplot(data_word, aes(x = q3, y = word_int, colour = word)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~word) + labs(title = "... human ni kanji masu ka")
+#ggplot(data_word, aes(x = q4, y = word_int, fill = word)) + geom_point() + geom_boxplot() + facet_wrap(~word) + labs(title = "jissai ni...")
+
+ggplot(data, aes(x = q1, y = word_f0_range, colour = word)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~word) + labs(title = "kono jookyoo de mooshiwakenaku...")
+#ggplot(data, aes(x = q2, y = word_f0_range, colour = word)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~word) + labs(title = "jibunni sekininga aru to...")
+#ggplot(data, aes(x = q3, y = word_f0_range, colour = word)) + geom_point() + geom_smooth(method = "lm") + facet_wrap(~word) + labs(title = "... human ni kanji masu ka")
+#ggplot(data, aes(x = q4, y = word_f0_range, fill = word)) + geom_point() + geom_boxplot() + facet_wrap(~word) + labs(title = "jissai ni...")
+
+
+```
+
