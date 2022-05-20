@@ -162,7 +162,6 @@ patches/mtime-cache.json
 spec/fixtures/logo.png
 
 # Results file
-/results/*/
 /results/wav/
 
 # Archive

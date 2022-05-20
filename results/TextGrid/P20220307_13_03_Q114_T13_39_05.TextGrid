@@ -1,0 +1,66 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.6919727891156464 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "segment" 
+        xmin = 0 
+        xmax = 3.6919727891156464 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.5219863945578231 
+            text = "" 
+        intervals [2]:
+            xmin = 0.5219863945578231 
+            xmax = 0.6083863945578232 
+            text = "g" 
+        intervals [3]:
+            xmin = 0.6083863945578232 
+            xmax = 0.6947863945578232 
+            text = "o" 
+        intervals [4]:
+            xmin = 0.6947863945578232 
+            xmax = 0.7811863945578231 
+            text = "m" 
+        intervals [5]:
+            xmin = 0.7811863945578231 
+            xmax = 0.8675863945578232 
+            text = "e" 
+        intervals [6]:
+            xmin = 0.8675863945578232 
+            xmax = 0.9539863945578232 
+            text = "n" 
+        intervals [7]:
+            xmin = 0.9539863945578232 
+            xmax = 3.6919727891156464 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 3.6919727891156464 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.5219863945578231 
+            text = "" 
+        intervals [2]:
+            xmin = 0.5219863945578231 
+            xmax = 0.9539863945578232 
+            text = "gomen" 
+        intervals [3]:
+            xmin = 0.9539863945578232 
+            xmax = 3.6919727891156464 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "note" 
+        xmin = 0 
+        xmax = 3.6919727891156464 
+        points: size = 0 

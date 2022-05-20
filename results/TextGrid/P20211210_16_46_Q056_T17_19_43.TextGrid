@@ -1,0 +1,125 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.5541950113378684 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "segment" 
+        xmin = 0 
+        xmax = 2.5541950113378684 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.4939295912833562 
+            text = "" 
+        intervals [2]:
+            xmin = 0.4939295912833562 
+            xmax = 0.6891745574748719 
+            text = "s" 
+        intervals [3]:
+            xmin = 0.6891745574748719 
+            xmax = 0.7255305166967403 
+            text = "u" 
+        intervals [4]:
+            xmin = 0.7255305166967403 
+            xmax = 0.7968959181322598 
+            text = "m" 
+        intervals [5]:
+            xmin = 0.7968959181322598 
+            xmax = 0.8597641723356009 
+            text = "i" 
+        intervals [6]:
+            xmin = 0.8597641723356009 
+            xmax = 0.92885458493756 
+            text = "m" 
+        intervals [7]:
+            xmin = 0.92885458493756 
+            xmax = 0.9934874013319929 
+            text = "a" 
+        intervals [8]:
+            xmin = 0.9934874013319929 
+            xmax = 1.094476176948294 
+            text = "s" 
+        intervals [9]:
+            xmin = 1.094476176948294 
+            xmax = 1.202197537605682 
+            text = "e" 
+        intervals [10]:
+            xmin = 1.202197537605682 
+            xmax = 1.2574047349425934 
+            text = "n" 
+        intervals [11]:
+            xmin = 1.2574047349425934 
+            xmax = 2.5541950113378684 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "mora" 
+        xmin = 0 
+        xmax = 2.5541950113378684 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.4939295912833562 
+            text = "" 
+        intervals [2]:
+            xmin = 0.4939295912833562 
+            xmax = 0.7255305166967403 
+            text = "su" 
+        intervals [3]:
+            xmin = 0.7255305166967403 
+            xmax = 0.8597641723356009 
+            text = "mi" 
+        intervals [4]:
+            xmin = 0.8597641723356009 
+            xmax = 0.9934874013319929 
+            text = "ma" 
+        intervals [5]:
+            xmin = 0.9934874013319929 
+            xmax = 1.202197537605682 
+            text = "se" 
+        intervals [6]:
+            xmin = 1.202197537605682 
+            xmax = 1.2574047349425934 
+            text = "n" 
+        intervals [7]:
+            xmin = 1.2574047349425934 
+            xmax = 2.5541950113378684 
+            text = "" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 2.5541950113378684 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.4939295912833562 
+            text = "" 
+        intervals [2]:
+            xmin = 0.4939295912833562 
+            xmax = 1.2574047349425934 
+            text = "sumimasen" 
+        intervals [3]:
+            xmin = 1.2574047349425934 
+            xmax = 2.5541950113378684 
+            text = "" 
+    item [4]:
+        class = "TextTier" 
+        name = "tone" 
+        xmin = 0 
+        xmax = 2.5541950113378684 
+        points: size = 3 
+        points [1]:
+            number = 0.4939295912833562 
+            mark = "%LH" 
+        points [2]:
+            number = 0.8756671631129748 
+            mark = "A" 
+        points [3]:
+            number = 1.2574047349425934 
+            mark = "LHL%" 

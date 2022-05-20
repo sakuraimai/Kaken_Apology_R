@@ -1,0 +1,138 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.8312925170068026 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "segment" 
+        xmin = 0 
+        xmax = 3.8312925170068026 
+        intervals: size = 25 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.5396462585034012 
+            text = "" 
+        intervals [2]:
+            xmin = 0.5396462585034012 
+            xmax = 0.5932114758947056 
+            text = "m" 
+        intervals [3]:
+            xmin = 0.5932114758947056 
+            xmax = 0.64677669328601 
+            text = "o" 
+        intervals [4]:
+            xmin = 0.64677669328601 
+            xmax = 0.7003419106773142 
+            text = "o" 
+        intervals [5]:
+            xmin = 0.7003419106773142 
+            xmax = 0.7539071280686186 
+            text = "s" 
+        intervals [6]:
+            xmin = 0.7539071280686186 
+            xmax = 0.807472345459923 
+            text = "i" 
+        intervals [7]:
+            xmin = 0.807472345459923 
+            xmax = 0.8610375628512272 
+            text = "w" 
+        intervals [8]:
+            xmin = 0.8610375628512272 
+            xmax = 0.9146027802425316 
+            text = "a" 
+        intervals [9]:
+            xmin = 0.9146027802425316 
+            xmax = 0.968167997633836 
+            text = "k" 
+        intervals [10]:
+            xmin = 0.968167997633836 
+            xmax = 1.0217332150251404 
+            text = "e" 
+        intervals [11]:
+            xmin = 1.0217332150251404 
+            xmax = 1.0752984324164447 
+            text = "a" 
+        intervals [12]:
+            xmin = 1.0752984324164447 
+            xmax = 1.128863649807749 
+            text = "r" 
+        intervals [13]:
+            xmin = 1.128863649807749 
+            xmax = 1.1824288671990533 
+            text = "i" 
+        intervals [14]:
+            xmin = 1.1824288671990533 
+            xmax = 1.2359940845903576 
+            text = "m" 
+        intervals [15]:
+            xmin = 1.2359940845903576 
+            xmax = 1.289559301981662 
+            text = "a" 
+        intervals [16]:
+            xmin = 1.289559301981662 
+            xmax = 1.3431245193729664 
+            text = "s" 
+        intervals [17]:
+            xmin = 1.3431245193729664 
+            xmax = 1.3966897367642708 
+            text = "e" 
+        intervals [18]:
+            xmin = 1.3966897367642708 
+            xmax = 1.4502549541555751 
+            text = "n" 
+        intervals [19]:
+            xmin = 1.4502549541555751 
+            xmax = 1.5038201715468795 
+            text = "d" 
+        intervals [20]:
+            xmin = 1.5038201715468795 
+            xmax = 1.557385388938184 
+            text = "e" 
+        intervals [21]:
+            xmin = 1.557385388938184 
+            xmax = 1.6109506063294883 
+            text = "s" 
+        intervals [22]:
+            xmin = 1.6109506063294883 
+            xmax = 1.6645158237207924 
+            text = "i" 
+        intervals [23]:
+            xmin = 1.6645158237207924 
+            xmax = 1.7180810411120968 
+            text = "t" 
+        intervals [24]:
+            xmin = 1.7180810411120968 
+            xmax = 1.7716462585034012 
+            text = "a" 
+        intervals [25]:
+            xmin = 1.7716462585034012 
+            xmax = 3.8312925170068026 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 3.8312925170068026 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.5396462585034012 
+            text = "" 
+        intervals [2]:
+            xmin = 0.5396462585034012 
+            xmax = 1.7716462585034012 
+            text = "moosiwakearimasendesita" 
+        intervals [3]:
+            xmin = 1.7716462585034012 
+            xmax = 3.8312925170068026 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "comment" 
+        xmin = 0 
+        xmax = 3.8312925170068026 
+        points: size = 0 

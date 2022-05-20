@@ -1,0 +1,82 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.7616326530612243 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "segment" 
+        xmin = 0 
+        xmax = 3.7616326530612243 
+        intervals: size = 11 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.1928163265306122 
+            text = "" 
+        intervals [2]:
+            xmin = 1.1928163265306122 
+            xmax = 1.3003718820861678 
+            text = "s" 
+        intervals [3]:
+            xmin = 1.3003718820861678 
+            xmax = 1.4079274376417232 
+            text = "u" 
+        intervals [4]:
+            xmin = 1.4079274376417232 
+            xmax = 1.5154829931972789 
+            text = "m" 
+        intervals [5]:
+            xmin = 1.5154829931972789 
+            xmax = 1.6230385487528345 
+            text = "i" 
+        intervals [6]:
+            xmin = 1.6230385487528345 
+            xmax = 1.7305941043083901 
+            text = "m" 
+        intervals [7]:
+            xmin = 1.7305941043083901 
+            xmax = 1.8381496598639457 
+            text = "a" 
+        intervals [8]:
+            xmin = 1.8381496598639457 
+            xmax = 1.9457052154195011 
+            text = "s" 
+        intervals [9]:
+            xmin = 1.9457052154195011 
+            xmax = 2.053260770975057 
+            text = "e" 
+        intervals [10]:
+            xmin = 2.053260770975057 
+            xmax = 2.1608163265306124 
+            text = "n" 
+        intervals [11]:
+            xmin = 2.1608163265306124 
+            xmax = 3.7616326530612243 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 3.7616326530612243 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.1928163265306122 
+            text = "" 
+        intervals [2]:
+            xmin = 1.1928163265306122 
+            xmax = 2.1608163265306124 
+            text = "sumimasen" 
+        intervals [3]:
+            xmin = 2.1608163265306124 
+            xmax = 3.7616326530612243 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "comment" 
+        xmin = 0 
+        xmax = 3.7616326530612243 
+        points: size = 0 

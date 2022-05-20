@@ -1,0 +1,86 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 3.1811337868480725 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "segment" 
+        xmin = 0 
+        xmax = 3.1811337868480725 
+        intervals: size = 12 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.6105668934240362 
+            text = "" 
+        intervals [2]:
+            xmin = 0.6105668934240362 
+            xmax = 0.6969668934240363 
+            text = "g" 
+        intervals [3]:
+            xmin = 0.6969668934240363 
+            xmax = 0.7833668934240362 
+            text = "o" 
+        intervals [4]:
+            xmin = 0.7833668934240362 
+            xmax = 0.8697668934240362 
+            text = "m" 
+        intervals [5]:
+            xmin = 0.8697668934240362 
+            xmax = 0.9561668934240362 
+            text = "e" 
+        intervals [6]:
+            xmin = 0.9561668934240362 
+            xmax = 1.0425668934240362 
+            text = "n" 
+        intervals [7]:
+            xmin = 1.0425668934240362 
+            xmax = 1.1289668934240362 
+            text = "n" 
+        intervals [8]:
+            xmin = 1.1289668934240362 
+            xmax = 1.215366893424036 
+            text = "a" 
+        intervals [9]:
+            xmin = 1.215366893424036 
+            xmax = 1.3017668934240363 
+            text = "s" 
+        intervals [10]:
+            xmin = 1.3017668934240363 
+            xmax = 1.388166893424036 
+            text = "a" 
+        intervals [11]:
+            xmin = 1.388166893424036 
+            xmax = 1.4745668934240361 
+            text = "i" 
+        intervals [12]:
+            xmin = 1.4745668934240361 
+            xmax = 3.1811337868480725 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 3.1811337868480725 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.6105668934240362 
+            text = "" 
+        intervals [2]:
+            xmin = 0.6105668934240362 
+            xmax = 1.4745668934240361 
+            text = "gomennasai" 
+        intervals [3]:
+            xmin = 1.4745668934240361 
+            xmax = 3.1811337868480725 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "note" 
+        xmin = 0 
+        xmax = 3.1811337868480725 
+        points: size = 0 

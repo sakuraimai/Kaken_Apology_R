@@ -1,0 +1,110 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.716734693877551 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "segment" 
+        xmin = 0 
+        xmax = 2.716734693877551 
+        intervals: size = 18 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.5383673469387755 
+            text = "" 
+        intervals [2]:
+            xmin = 0.5383673469387755 
+            xmax = 0.5988673469387755 
+            text = "m" 
+        intervals [3]:
+            xmin = 0.5988673469387755 
+            xmax = 0.6593673469387755 
+            text = "o" 
+        intervals [4]:
+            xmin = 0.6593673469387755 
+            xmax = 0.7198673469387755 
+            text = "o" 
+        intervals [5]:
+            xmin = 0.7198673469387755 
+            xmax = 0.7803673469387755 
+            text = "s" 
+        intervals [6]:
+            xmin = 0.7803673469387755 
+            xmax = 0.8408673469387755 
+            text = "i" 
+        intervals [7]:
+            xmin = 0.8408673469387755 
+            xmax = 0.9013673469387755 
+            text = "w" 
+        intervals [8]:
+            xmin = 0.9013673469387755 
+            xmax = 0.9618673469387755 
+            text = "a" 
+        intervals [9]:
+            xmin = 0.9618673469387755 
+            xmax = 1.0223673469387755 
+            text = "k" 
+        intervals [10]:
+            xmin = 1.0223673469387755 
+            xmax = 1.0828673469387755 
+            text = "e" 
+        intervals [11]:
+            xmin = 1.0828673469387755 
+            xmax = 1.1433673469387755 
+            text = "n" 
+        intervals [12]:
+            xmin = 1.1433673469387755 
+            xmax = 1.2038673469387755 
+            text = "a" 
+        intervals [13]:
+            xmin = 1.2038673469387755 
+            xmax = 1.2643673469387755 
+            text = "i" 
+        intervals [14]:
+            xmin = 1.2643673469387755 
+            xmax = 1.3248673469387755 
+            text = "d" 
+        intervals [15]:
+            xmin = 1.3248673469387755 
+            xmax = 1.3853673469387755 
+            text = "e" 
+        intervals [16]:
+            xmin = 1.3853673469387755 
+            xmax = 1.4458673469387755 
+            text = "s" 
+        intervals [17]:
+            xmin = 1.4458673469387755 
+            xmax = 1.5063673469387755 
+            text = "u" 
+        intervals [18]:
+            xmin = 1.5063673469387755 
+            xmax = 2.716734693877551 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 2.716734693877551 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.5383673469387755 
+            text = "" 
+        intervals [2]:
+            xmin = 0.5383673469387755 
+            xmax = 1.5063673469387755 
+            text = "moosiwakenaidesu" 
+        intervals [3]:
+            xmin = 1.5063673469387755 
+            xmax = 2.716734693877551 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "comment" 
+        xmin = 0 
+        xmax = 2.716734693877551 
+        points: size = 0 

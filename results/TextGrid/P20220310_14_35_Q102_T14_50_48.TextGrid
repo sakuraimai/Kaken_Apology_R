@@ -1,0 +1,74 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.507755102040816 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "segment" 
+        xmin = 0 
+        xmax = 2.507755102040816 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.5298775510204081 
+            text = "" 
+        intervals [2]:
+            xmin = 0.5298775510204081 
+            xmax = 0.6190204081632653 
+            text = "g" 
+        intervals [3]:
+            xmin = 0.6190204081632653 
+            xmax = 0.7081632653061225 
+            text = "o" 
+        intervals [4]:
+            xmin = 0.7081632653061225 
+            xmax = 0.7973061224489796 
+            text = "m" 
+        intervals [5]:
+            xmin = 0.7973061224489796 
+            xmax = 0.8864489795918368 
+            text = "e" 
+        intervals [6]:
+            xmin = 0.8864489795918368 
+            xmax = 0.975591836734694 
+            text = "n" 
+        intervals [7]:
+            xmin = 0.975591836734694 
+            xmax = 1.064734693877551 
+            text = "n" 
+        intervals [8]:
+            xmin = 1.064734693877551 
+            xmax = 1.1538775510204082 
+            text = "e" 
+        intervals [9]:
+            xmin = 1.1538775510204082 
+            xmax = 2.507755102040816 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 2.507755102040816 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.5298775510204081 
+            text = "" 
+        intervals [2]:
+            xmin = 0.5298775510204081 
+            xmax = 1.1538775510204082 
+            text = "gomenne" 
+        intervals [3]:
+            xmin = 1.1538775510204082 
+            xmax = 2.507755102040816 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "comment" 
+        xmin = 0 
+        xmax = 2.507755102040816 
+        points: size = 0 

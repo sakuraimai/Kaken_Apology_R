@@ -1,0 +1,101 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 2.6238548752834467 
+tiers? <exists> 
+size = 4 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "segment" 
+        xmin = 0 
+        xmax = 2.6238548752834467 
+        intervals: size = 7 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.721412879499949 
+            text = "" 
+        intervals [2]:
+            xmin = 0.721412879499949 
+            xmax = 0.7516832328929389 
+            text = "g" 
+        intervals [3]:
+            xmin = 0.7516832328929389 
+            xmax = 0.8987971503828698 
+            text = "o" 
+        intervals [4]:
+            xmin = 0.8987971503828698 
+            xmax = 0.9653919278474475 
+            text = "m" 
+        intervals [5]:
+            xmin = 0.9653919278474475 
+            xmax = 1.0344083335834644 
+            text = "e" 
+        intervals [6]:
+            xmin = 1.0344083335834644 
+            xmax = 1.0919274376417234 
+            text = "n" 
+        intervals [7]:
+            xmin = 1.0919274376417234 
+            xmax = 2.6238548752834467 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "mora" 
+        xmin = 0 
+        xmax = 2.6238548752834467 
+        intervals: size = 5 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.721412879499949 
+            text = "" 
+        intervals [2]:
+            xmin = 0.721412879499949 
+            xmax = 0.8987971503828698 
+            text = "go" 
+        intervals [3]:
+            xmin = 0.8987971503828698 
+            xmax = 1.0344083335834644 
+            text = "me" 
+        intervals [4]:
+            xmin = 1.0344083335834644 
+            xmax = 1.0919274376417234 
+            text = "n" 
+        intervals [5]:
+            xmin = 1.0919274376417234 
+            xmax = 2.6238548752834467 
+            text = "" 
+    item [3]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 2.6238548752834467 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 0.721412879499949 
+            text = "" 
+        intervals [2]:
+            xmin = 0.721412879499949 
+            xmax = 1.0919274376417234 
+            text = "gomen" 
+        intervals [3]:
+            xmin = 1.0919274376417234 
+            xmax = 2.6238548752834467 
+            text = "" 
+    item [4]:
+        class = "TextTier" 
+        name = "tone" 
+        xmin = 0 
+        xmax = 2.6238548752834467 
+        points: size = 3 
+        points [1]:
+            number = 0.721412879499949 
+            mark = "%LH" 
+        points [2]:
+            number = 0.9066701585708362 
+            mark = "A" 
+        points [3]:
+            number = 1.0919274376417234 
+            mark = "LHL%" 

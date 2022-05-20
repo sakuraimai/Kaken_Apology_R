@@ -1,0 +1,74 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 4.388571428571429 
+tiers? <exists> 
+size = 3 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "segment" 
+        xmin = 0 
+        xmax = 4.388571428571429 
+        intervals: size = 9 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.4182857142857144 
+            text = "" 
+        intervals [2]:
+            xmin = 1.4182857142857144 
+            xmax = 1.5097142857142858 
+            text = "g" 
+        intervals [3]:
+            xmin = 1.5097142857142858 
+            xmax = 1.6011428571428572 
+            text = "o" 
+        intervals [4]:
+            xmin = 1.6011428571428572 
+            xmax = 1.6925714285714286 
+            text = "m" 
+        intervals [5]:
+            xmin = 1.6925714285714286 
+            xmax = 1.784 
+            text = "e" 
+        intervals [6]:
+            xmin = 1.784 
+            xmax = 1.8754285714285714 
+            text = "n" 
+        intervals [7]:
+            xmin = 1.8754285714285714 
+            xmax = 1.9668571428571429 
+            text = "n" 
+        intervals [8]:
+            xmin = 1.9668571428571429 
+            xmax = 2.0582857142857143 
+            text = "e" 
+        intervals [9]:
+            xmin = 2.0582857142857143 
+            xmax = 4.388571428571429 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "word" 
+        xmin = 0 
+        xmax = 4.388571428571429 
+        intervals: size = 3 
+        intervals [1]:
+            xmin = 0 
+            xmax = 1.4182857142857144 
+            text = "" 
+        intervals [2]:
+            xmin = 1.4182857142857144 
+            xmax = 2.0582857142857143 
+            text = "gomenne" 
+        intervals [3]:
+            xmin = 2.0582857142857143 
+            xmax = 4.388571428571429 
+            text = "" 
+    item [3]:
+        class = "TextTier" 
+        name = "note" 
+        xmin = 0 
+        xmax = 4.388571428571429 
+        points: size = 0 
