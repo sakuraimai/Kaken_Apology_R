@@ -203,7 +203,8 @@ def setPersonalInformation():
     participant_id = f"R{str(datetime_now.year).zfill(4)}{str(datetime_now.month).zfill(2)}{str(datetime_now.day).zfill(2)}_{str(datetime_now.hour).zfill(2)}_{str(datetime_now.minute).zfill(2)}"
     global_particilant_id = participant_id
 
-    with open(shuffled_folders_dir + global_particilant_id + '_F' + folder_name, 'a') as OUTPUT:
+    print("書き込み")
+    with open(shuffled_folders_dir + global_particilant_id + '_F' + folder_name, 'w') as OUTPUT:
         json.dump(l, OUTPUT, indent=2, ensure_ascii=False)
        
 
@@ -275,6 +276,7 @@ def listeningExperiment(id):
     print("l_len(experiment): ")
     print(len(l))
     execute_datetime = datetime.datetime.now()
+    
     # test_idフォーマット: W削除
     test_id = f"{global_particilant_id}_W{wav_file_id}_T{str(execute_datetime.hour).zfill(2)}_{str(execute_datetime.minute).zfill(2)}_{str(execute_datetime.second).zfill(2)}"
     # test_id = f"{global_particilant_id}_{wav_file_id}_{str(execute_datetime.hour).zfill(2)}_{str(execute_datetime.minute).zfill(2)}_{str(execute_datetime.second).zfill(2)}"
