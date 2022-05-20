@@ -148,35 +148,35 @@ def main():
    
 
     # 作ったdict_for_experimentを展開してlistにする手法
-    temp_output_list = []
-    if not id_mix and not word_mix and chunk == 'id':
-        for key in dict_for_experiment_id:
-            temp_output_list.extend(dict_for_experiment_id[key])
-    elif not id_mix and word_mix and chunk == 'id':
-        for key in dict_for_experiment_id:
-            # dict_for_experiment_id[key] = random.shuffle(dict_for_experiment_id[key])
-            # temp_output_list.extend(dict_for_experiment_id[key])
-            # random.shuffle(dict_for_experiment_id[key])
-            # print(dict_for_experiment_id[key])
-            random.shuffle(dict_for_experiment_id[key])
-            # print(dict_for_experiment_id[key])
-            # print(type(temp))
-            temp_output_list.extend(dict_for_experiment_id[key])
-    elif not id_mix and not word_mix and chunk == 'word':
-        for key in dict_for_experiment_word:
-            temp_output_list.extend()
-    elif id_mix and not word_mix and chunk == 'word':
-        for key in dict_for_experiment_word:
-            temp_output_list.extend(random.shuffle(dict_for_experiment_word[key]))
-    elif id_mix and word_mix:
-        random.shuffle(list_for_experiment)
-        temp_output_list = list_for_experiment      
-    else:
-        sys.exit("条件設定が間違っています。条件を確認してやり直してください。")
+    # temp_output_list = []
+    # if not id_mix and not word_mix and chunk == 'id':
+    #     for key in dict_for_experiment_id:
+    #         temp_output_list.extend(dict_for_experiment_id[key])
+    # elif not id_mix and word_mix and chunk == 'id':
+    #     for key in dict_for_experiment_id:
+    #         # dict_for_experiment_id[key] = random.shuffle(dict_for_experiment_id[key])
+    #         # temp_output_list.extend(dict_for_experiment_id[key])
+    #         # random.shuffle(dict_for_experiment_id[key])
+    #         # print(dict_for_experiment_id[key])
+    #         random.shuffle(dict_for_experiment_id[key])
+    #         # print(dict_for_experiment_id[key])
+    #         # print(type(temp))
+    #         temp_output_list.extend(dict_for_experiment_id[key])
+    # elif not id_mix and not word_mix and chunk == 'word':
+    #     for key in dict_for_experiment_word:
+    #         temp_output_list.extend()
+    # elif id_mix and not word_mix and chunk == 'word':
+    #     for key in dict_for_experiment_word:
+    #         temp_output_list.extend(random.shuffle(dict_for_experiment_word[key]))
+    # elif id_mix and word_mix:
+    #     random.shuffle(list_for_experiment)
+    #     temp_output_list = list_for_experiment      
+    # else:
+    #     sys.exit("条件設定が間違っています。条件を確認してやり直してください。")
 
     # 作ったdict_for_experimentをdict形式を保持したままapp.pyに渡す
     # temp_output_dict = dict()
-    # 一時的にtemp_output_dict→temp_output
+    # temp_output_dict→temp_output
     if not id_mix and not word_mix and chunk == 'id':
         # この方式は全部id→謝罪語で順番通り：使われないかもしれない
         temp_output = copy.copy(dict_for_experiment_id_word)
@@ -186,7 +186,7 @@ def main():
         temp_output = copy.copy(dict_for_experiment_id)
     elif not id_mix and not word_mix and chunk == 'word':
         # この方式は全部謝罪語→idで順番通り：使われないかもしれない
-        temp_output = copy.copy(dict_for_experiment_word)
+        temp_output = copy.copy(dict_for_experiment_word_id)
     elif id_mix and not word_mix and chunk == 'word':
         for key in dict_for_experiment_word:
             random.shuffle(dict_for_experiment_word[key])
@@ -215,13 +215,11 @@ def main():
     files_num = 0
     if type(temp_output) == dict:
         dict_for_experiment = copy.copy(temp_output)
-        # if type(dict_for_experiment[0]) == list:
         for i in dict_for_experiment:
             if type(dict_for_experiment[i]) == dict:
                 for j in dict_for_experiment[i]:
                     files_num += len(dict_for_experiment[i][j])
             elif type(dict_for_experiment[i]) == list:
-                # for key in dict_for_experiment:
                 files_num += len(dict_for_experiment[i])
     elif type(temp_output) == list:
         list_for_experiment = copy.copy(temp_output)
@@ -230,14 +228,10 @@ def main():
     print("格納ファイル数：" + files_num)
     
     with open(str(p_output) + '/' + str(current_file_name) + '.json', 'a') as OUTPUT:
-        json.dump(temp_output, OUTPUT, indent=2)
-        # if type(temp_output) == dict:
-        #     json.dump(dict_for_experiment, OUTPUT, indent=2)
-        # if type(temp_output) == list:
-        #     json.dump(list_for_experiment, OUTPUT, indent=2)
-    with open(str(p_output) + '/' + str(current_file_name) + '.csv', 'a') as OUTPUT:
-        writer = csv.writer(OUTPUT)
-        writer.writerow(list_for_experiment)
+        json.dump(temp_output, OUTPUT, indent=2, ensure_ascii=False)
+    # with open(str(p_output) + '/' + str(current_file_name) + '.csv', 'a') as OUTPUT:
+    #     writer = csv.writer(OUTPUT)
+    #     writer.writerow(list_for_experiment)
     with open(output_overview, 'a') as OVERVIEW:
         writer = csv.writer(OVERVIEW)
         condition_list[0].insert(0, str(len(list_for_experiment)))

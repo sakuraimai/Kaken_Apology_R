@@ -33,6 +33,7 @@ input_csv_path = "./results/apology_test.csv"
 new_result_csv_path = "./results/new_apology_test.csv"
 personal_info_path = "./results/personal_info.csv"
 filenames_folders_dir = 'experiment_folder/wavfile/'
+shuffled_folders_dir = 'experiment_folder/shuffled_wavfile/'
 
 global_audio_recorder = None
 
@@ -119,16 +120,18 @@ def setExperimentalConditions():
                 l = copy.copy(temp)
                 random.shuffle(l)
             elif type(temp) == dict:
+                temp_list = list()
                 print("dict")
                 for i in temp:
                     if type(temp[i]) == dict:
                         for j in temp[i]:
                             random.shuffle(temp[i][j])
-                            l.extend(temp[i][j])
+                            temp_list.extend(temp[i][j])
                     elif type(temp[i]) == list:
                         # for key in temp:
                         random.shuffle(temp[i])
-                        l.extend(temp[i])
+                        temp_list.extend(temp[i])
+                l = copy.copy(temp_list)
 
         # with open(result_csv_path, "a", encoding="utf-8", newline="")as file:
         #     writer = csv.writer(file)
@@ -200,6 +203,9 @@ def setPersonalInformation():
     participant_id = f"R{str(datetime_now.year).zfill(4)}{str(datetime_now.month).zfill(2)}{str(datetime_now.day).zfill(2)}_{str(datetime_now.hour).zfill(2)}_{str(datetime_now.minute).zfill(2)}"
     global_particilant_id = participant_id
 
+    with open(shuffled_folders_dir + global_particilant_id + '_F' + folder_name, 'a') as OUTPUT:
+        json.dump(l, OUTPUT, indent=2, ensure_ascii=False)
+       
 
     name = "unknown"
     email = "unknown"

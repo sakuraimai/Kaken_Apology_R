@@ -165,8 +165,5 @@ spec/fixtures/logo.png
 /results/*/
 /results/wav/
 
-# Setting
-/questionaires/
-
 # Archive
 /.history/
