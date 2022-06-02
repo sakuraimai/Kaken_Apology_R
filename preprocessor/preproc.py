@@ -17,6 +17,9 @@ condition_csv_path = 'preprocessor/condition.csv'
 output_overview = 'experiment_folder/overview.csv'
 output_files_dir = 'experiment_folder/wavfile/'
 
+if not os.path.exists(output_files_dir):
+    os.makedirs(output_files_dir)
+    
 # app.pyからコピー
 # 音声ファイルのIDを格納したdictを作る
 with open(file_info_path) as f:
