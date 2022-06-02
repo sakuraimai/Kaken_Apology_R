@@ -158,11 +158,22 @@ ts-gen
 
 # Used to accelerate builds after sync
 patches/mtime-cache.json
-
 spec/fixtures/logo.png
 
 # Results file
+/results/backup/
+/results/wav/data/
+/results/Intensity/
+/results/Pitch/
+/results/Textgrid/
 /results/wav/
+/results/apology
+
+# Experiment folder
+/experiment_folder/shuffled_wavfile/*
+/experiment_folder/wavfile/*
 
 # Archive
 /.history/
+
+!.gitkeep

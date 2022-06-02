@@ -16,7 +16,6 @@ from flask import Flask, render_template, request, redirect
 from flask import send_file, send_from_directory, abort
 
 sys.path.append('./src')
-# from src.audio_recorder.audio_recorder import AudioRecorder
 
 audio_input_channel = 0
 
@@ -26,11 +25,11 @@ next_link = ""
 global_pure_next_link = ""
 global_pure_past_link = ""
 ### 追加 ###
-example_question_path = "./questionaires/example_question.csv"
+questions_file_path = "./questionaires/example_question.csv"
 questionaire_csv_path = "./questionaires/Stimuli_Production.csv"
 wav_dir_path = "./results/wav/"
 input_csv_path = "./results/apology_test.csv"
-new_result_csv_path = "./results/new_apology_test.csv"
+new_result_csv_path = "./results/apology_test_r.csv"
 personal_info_path = "./results/personal_info.csv"
 filenames_folders_dir = 'experiment_folder/wavfile/'
 shuffled_folders_dir = 'experiment_folder/shuffled_wavfile/'
@@ -41,7 +40,7 @@ global_audio_recorder = None
 
 ### 追加 ###
 # 質問をcsvから追加するためのpath
-with open(example_question_path, "r", newline='') as eq:
+with open(questions_file_path, "r", newline='') as eq:
     header = next(csv.reader(eq))
     reader = csv.reader(eq)
     eq_list = [row[1] for row in reader]
@@ -231,11 +230,6 @@ def experimentQuestionaireIntroduction():
     global l
     print("l_len(introduction): ")
     print(len(l))
-    # print("l[0:10]: 1")
-    # print(l[0:10])
-    # random.shuffle(l)
-    # print("l[0:10]: 2")
-    # print(l[0:10])
     return render_template("experimentQuestionaireInduction.html")
 
 
@@ -248,16 +242,9 @@ def listeningExperiment(id):
     global subject_condition
     global apology_word_condition
     global l
-    print("l[0:10]: 3")
-    print(l[0:10])
     if len(l) < id+1:
         return redirect("/finishallsession")
 
-    # 設問数は4個で固定かもしれない
-    # 後からcsvで追加できる方式にするかも
-    # questions = eq
-    # question1 = "誠意を感じますか"
-    # question2 = "謝られているように感じますか"
     question1 = eq_list[0]
     question2 = eq_list[1]
     question3 = eq_list[2]
@@ -277,7 +264,6 @@ def listeningExperiment(id):
     print(len(l))
     execute_datetime = datetime.datetime.now()
     
-    # test_idフォーマット: W削除
     test_id = f"{global_particilant_id}_W{wav_file_id}_T{str(execute_datetime.hour).zfill(2)}_{str(execute_datetime.minute).zfill(2)}_{str(execute_datetime.second).zfill(2)}"
     # test_id = f"{global_particilant_id}_{wav_file_id}_{str(execute_datetime.hour).zfill(2)}_{str(execute_datetime.minute).zfill(2)}_{str(execute_datetime.second).zfill(2)}"
 
