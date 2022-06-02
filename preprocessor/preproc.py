@@ -78,17 +78,17 @@ def main():
     # 取り出す単語をheaderからリストに入れる
     # csvに書き込んだ設定情報からflagを立てる
     for i, value in enumerate(condition_list[0]):
-        if i > 0 and i < 8 and value == '1':
+        if i > 0 and i < 9 and value == '1':
             specified_word_list.append(condition_header[i])
-        elif i == 8:
+        elif i == 9:
             acquisitions = int(value)
-        elif i == 9 and value == '1':
-            id_mix = True
         elif i == 10 and value == '1':
-            word_mix = True
+            id_mix = True
         elif i == 11 and value == '1':
+            word_mix = True
+        elif i == 12 and value == '1':
             chunk = 'id'
-        elif i == 11 and value == '2':
+        elif i == 12 and value == '2':
             chunk = 'word'
 
 

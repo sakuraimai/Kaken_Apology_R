@@ -1,8 +1,0 @@
-participant_id,datetime,name,email_address,age,gender
-demo,demo,demo,demo,demo,demoP20211209_18_52,2021-12-09 18:52:51.691150,test1209,test@waseda.co.jp,20,other
-P20211209_19_15,2021-12-09 19:15:18.933818,test1209,test@waseda.jp,20,other
-P20211210_16_05,2021-12-10 16:05:58.018770,"Tajima, Tadayuki",tata1230@fuji.waseda.jp,20,male
-P20211210_16_21,2021-12-10 16:21:45.020795,"Tajima, Tadayuki",tata1230@fuji.waseda.jp,20,male
-P20211210_16_37,2021-12-10 16:37:12.331041,"Tajima, Tadayuki",tata1230@fuji.waseda.jp,20,male
-P20211210_16_40,2021-12-10 16:40:25.942884,"Tajima, Tadayuki",tata1230@fuji.waseda.jp,20,male
-P20211210_16_46,2021-12-10 16:46:47.387093,"Tajima, Tadayuki",tata1230@fuji.waseda.jp,20,male
