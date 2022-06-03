@@ -6,7 +6,6 @@ import random
 import sys
 import copy
 import json
-# import _tkinter
 from tkinter import N
 from flask import Flask, render_template, request, redirect
 from flask import send_file, send_from_directory, abort
@@ -128,10 +127,6 @@ def setExperimentalConditions():
                         temp_list.extend(temp[i])
                 l = copy.copy(temp_list)
 
-        # with open(result_csv_path, "a", encoding="utf-8", newline="")as file:
-        #     writer = csv.writer(file)
-        #     writer.writerow([subject_condition, apology_word_condition])
-
         return redirect("/setpersonalinformation")
 
     return render_template("setExperimentalConditions.html")
@@ -186,13 +181,6 @@ def setPersonalInformation():
     global global_audio_recorder
     global audio_input_channel
 
-    # result_csv_path = "./results/personal_info.csv"
-    # test
-    print("l_len(setpersonalinformation): ")
-    print(len(l))
-    if len(l) < 10:
-        print(l)
-
     datetime_now = datetime.datetime.now()
     datetime_str = str(datetime_now)
     participant_id = f"R{str(datetime_now.year).zfill(4)}{str(datetime_now.month).zfill(2)}{str(datetime_now.day).zfill(2)}_{str(datetime_now.hour).zfill(2)}_{str(datetime_now.minute).zfill(2)}"
@@ -201,7 +189,6 @@ def setPersonalInformation():
     print("書き込み")
     with open(shuffled_folders_dir + global_particilant_id + '_F' + folder_name, 'w') as OUTPUT:
         json.dump(l, OUTPUT, indent=2, ensure_ascii=False)
-
 
     name = "unknown"
     email = "unknown"
@@ -261,14 +248,6 @@ def listeningExperiment(id):
     execute_datetime = datetime.datetime.now()
 
     test_id = f"{global_particilant_id}_W{wav_file_id}_T{str(execute_datetime.hour).zfill(2)}_{str(execute_datetime.minute).zfill(2)}_{str(execute_datetime.second).zfill(2)}"
-    # test_id = f"{global_particilant_id}_{wav_file_id}_{str(execute_datetime.hour).zfill(2)}_{str(execute_datetime.minute).zfill(2)}_{str(execute_datetime.second).zfill(2)}"
-
-    # global_audio_recorder = AudioRecorder(test_id, audio_input_channel)
-    # wav_file_path = wav_dir_path + wav_file_id + ".wav"
-    # playsound(wav_file_path)
-    # wav_obj = simpleaudio.WaveObject.from_wave_file(wav_file_path)
-    # play_obj = wav_obj.play()
-    # play_obj.wait_done()
 
     if(request.method == "POST"):
         datetime_str = str(datetime.datetime.now())
@@ -280,7 +259,6 @@ def listeningExperiment(id):
         with open(new_result_csv_path, "a", encoding="utf-8", newline="")as file:
             writer = csv.writer(file)
             writer.writerow([test_id, global_particilant_id, wav_file_id, datetime_str, q1, q2, q3, q4])
-        # return redirect("/startrecord")
         return redirect(global_pure_next_link)
 
     global_pure_next_link = f"/listeningexperiment/{index}"
@@ -298,13 +276,11 @@ def listeningExperiment(id):
                            question3 = question3,
                            question4 = question4,
                            wav_file_id = wav_file_id,
-                        #    wav_file_path = wav_file_path,
                            progress = progress
                            )
 
 @app.route('/listeningexperiment/<wav_file_id>')
 def returnAudioFile(wav_file_id):
-    # path_to_audio_file = "/Audios/yourFolderPath" + audio_file_name
     wav_file_path = wav_dir_path + wav_file_id + "_S.wav"
 
     return send_file(
@@ -312,8 +288,6 @@ def returnAudioFile(wav_file_id):
         mimetype="audio/wav",
         as_attachment=True,
         download_name="test.wav")
-        #  attachment_filename="test.wav")
-
 
 @app.route("/reversepastquestipnaire")
 def get_back_to_the_past_questionaire():
