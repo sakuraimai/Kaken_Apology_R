@@ -168,6 +168,7 @@ spec/fixtures/logo.png
 /results/Textgrid/
 /results/wav/
 /results/apology
+/results/apology_test_r.csv
 
 # Experiment folder
 /experiment_folder/shuffled_wavfile/*
@@ -175,5 +176,8 @@ spec/fixtures/logo.png
 
 # Archive
 /.history/
+.Rhistory
+PyAudio-0.2.11-cp38-cp38-win_amd64.whl
+get-pip.py
 
 !.gitkeep

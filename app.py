@@ -4,13 +4,9 @@ import datetime
 import csv
 import random
 import sys
-# import wave
-# from playsound import playsound
-# import simpleaudio
 import copy
 import json
-import numpy as np
-import _tkinter
+# import _tkinter
 from tkinter import N
 from flask import Flask, render_template, request, redirect
 from flask import send_file, send_from_directory, abort
@@ -99,7 +95,7 @@ def setExperimentalConditions():
     apology_word_condition = "None"
 
     if request.method == "POST":
-       
+
         # 全部listからやる時
         # folder_name = request.form["folder_name"] + '.csv'
         # print(folder_name)
@@ -135,7 +131,7 @@ def setExperimentalConditions():
         # with open(result_csv_path, "a", encoding="utf-8", newline="")as file:
         #     writer = csv.writer(file)
         #     writer.writerow([subject_condition, apology_word_condition])
-        
+
         return redirect("/setpersonalinformation")
 
     return render_template("setExperimentalConditions.html")
@@ -163,7 +159,7 @@ def setExperimentalConditions():
 #         # with open(result_csv_path, "a", encoding="utf-8", newline="")as file:
 #         #     writer = csv.writer(file)
 #         #     writer.writerow([subject_condition, apology_word_condition])
-        
+
 #         if subject_condition == "None":
 #             if apology_word_condition != "None":
 #                 l = copy.copy(apology_word_dict[apology_word_condition])
@@ -205,7 +201,7 @@ def setPersonalInformation():
     print("書き込み")
     with open(shuffled_folders_dir + global_particilant_id + '_F' + folder_name, 'w') as OUTPUT:
         json.dump(l, OUTPUT, indent=2, ensure_ascii=False)
-       
+
 
     name = "unknown"
     email = "unknown"
@@ -217,7 +213,7 @@ def setPersonalInformation():
         email = request.form["email"]
         age = request.form["age"]
         gender = request.form["gender"]
-        
+
         with open(personal_info_path, "a", encoding="utf-8", newline="") as file:
             writer = csv.writer(file)
             writer.writerow([participant_id, subject_condition, apology_word_condition, num_of_questions, datetime_str, name, email, age, gender])
@@ -249,7 +245,7 @@ def listeningExperiment(id):
     question2 = eq_list[1]
     question3 = eq_list[2]
     question4 = eq_list[3]
-   
+
     wav_file_id = l[id]
     index = id + 1
     l_len = len(l)
@@ -257,13 +253,13 @@ def listeningExperiment(id):
         progress = str(100*id/l_len)
     else:
         progress = "0"
-    
-    print("wav_file_id")  
+
+    print("wav_file_id")
     print(wav_file_id)
     print("l_len(experiment): ")
     print(len(l))
     execute_datetime = datetime.datetime.now()
-    
+
     test_id = f"{global_particilant_id}_W{wav_file_id}_T{str(execute_datetime.hour).zfill(2)}_{str(execute_datetime.minute).zfill(2)}_{str(execute_datetime.second).zfill(2)}"
     # test_id = f"{global_particilant_id}_{wav_file_id}_{str(execute_datetime.hour).zfill(2)}_{str(execute_datetime.minute).zfill(2)}_{str(execute_datetime.second).zfill(2)}"
 
@@ -309,15 +305,15 @@ def listeningExperiment(id):
 @app.route('/listeningexperiment/<wav_file_id>')
 def returnAudioFile(wav_file_id):
     # path_to_audio_file = "/Audios/yourFolderPath" + audio_file_name
-    wav_file_path = wav_dir_path + wav_file_id + ".wav"
+    wav_file_path = wav_dir_path + wav_file_id + "_S.wav"
 
     return send_file(
-        wav_file_path, 
-        mimetype="audio/wav", 
+        wav_file_path,
+        mimetype="audio/wav",
         as_attachment=True,
         download_name="test.wav")
         #  attachment_filename="test.wav")
-       
+
 
 @app.route("/reversepastquestipnaire")
 def get_back_to_the_past_questionaire():
