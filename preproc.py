@@ -13,7 +13,7 @@ from regex import P
 
 file_info_path = "./results/apology_test.csv"
 wav_dir_path = "results/wav/"
-condition_csv_path = 'preprocessor/condition.csv'
+condition_csv_path = 'experiment_folder/condition.csv'
 output_overview = 'experiment_folder/overview.csv'
 output_files_dir = 'experiment_folder/wavfile/'
 
