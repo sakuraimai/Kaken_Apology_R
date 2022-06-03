@@ -1,6 +1,6 @@
 # Kaken_Apology_R
  
-謝罪語を聞くことによる知覚実験プログラム。
+謝罪語を聞くことによる知覚実験プログラム
 
 ディレクトリ構造は以下
 ```
@@ -26,8 +26,6 @@
 
 # Requirement
  
-動かすのに必要なライブラリなどを列挙する
- 
 * python 3
 * flask
 * Mac with intel processor
@@ -42,14 +40,30 @@ pip install モジュール名
 
 # Usage
 
-基本的にはプログラムファイル(.py)がある場所に移動して実行する。
-(2022.6.2) preproc.pyの場所を変更。Kaken_Apology_Rの直下(app.pyと同じ場所)に移動。
+* 基本的にはプログラムファイル(.py)がある場所に移動して実行する
+
+```bash
+cd "directory_name" //"directory_name"に移動
+cd .. //一つ上のdirectoryに移動
+```
+
+* (2022.6.2) preproc.pyの場所を変更。Kaken_Apology_Rの直下(app.pyと同じ場所)に移動。
+* ターミナルで下記を実行して、/Desktop/Kaken_Apology_R が表示されたらOK
+```
+pwd
+```
 
 ## Preprocess
 
+* condition.csvを直接編集して条件を指定する
 
+```
+python preproc.py
+```
 
-# Note
- 
-注意点などがあれば書く
- 
+## Run app.py
+
+```
+python app.py
+```
+
