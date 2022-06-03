@@ -1,11 +1,9 @@
 # Kaken_Apology_R
  
 謝罪語を聞くことによる知覚実験プログラム。
- 
-# DEMO
- 
-デモ動画や図解を載せる
- 
+
+ディレクトリ構造は以下
+
 # Requirement
  
 動かすのに必要なライブラリなどを列挙する
@@ -16,24 +14,21 @@
  
 # Installation
  
-Requirementで列挙したライブラリなどのインストール方法を説明する
+"Module not found"のエラーが出た場合、下記を試す
  
 ```bash
-pip install huga_package
+pip install モジュール名
 ```
 
 # Usage
+
+基本的にはプログラムファイル(.py)がある場所に移動して実行する。
+(2022.6.2) preproc.pyの場所を変更。Kaken_Apology_Rの直下(app.pyと同じ場所)に移動。
+
 ## Preprocess
-実験に使う音声ファイルのクラスタを作成
- 
-基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
- 
+
+
+
 # Note
  
 注意点などがあれば書く
