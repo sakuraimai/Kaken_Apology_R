@@ -169,10 +169,12 @@ spec/fixtures/logo.png
 /results/wav/
 /results/apology
 /results/apology_test_r.csv
+results/personal_info.csv
 
 # Experiment folder
 /experiment_folder/shuffled_wavfile/*
 /experiment_folder/wavfile/*
+experiment_folder/overview.csv
 
 # Archive
 /.history/
